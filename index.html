@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heart Disease Prediction Form</title>
+    <style>
+        body {
+    background-color: #f5f5dc; /* Beige background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Center text in container */
+}
+
+h2 {
+    margin-top: 0; /* Remove top margin of h2 */
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+    <h2>Heart Disease Prediction Form</h2>
+    <form action="/predict" method="POST">
+
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" required><br><br>
+        
+        <label>Gender:</label>
+<input type="radio" id="male" name="sex" value="0" required>
+<label for="male">Male</label><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="radio" id="female" name="sex" value="1" required>
+<label for="female">Female</label><br><br>
+        
+        <label for="cp">Chest Pain Type:</label>
+        <select id="cp" name="cp" required>
+            <option value="" disabled selected hidden>Select type of pain</option>
+            <option value="0">Typical Angina</option>
+            <option value="1">Atypical Angina</option>
+            <option value="2">Non-Anginal Pain</option>
+            <option value="3">Asymptomatic</option>
+        </select><br><br>
+        
+        <label for="trestbps">Resting Blood Pressure (mm Hg):</label>
+        <input type="number" id="trestbps" name="trestbps" required><br><br>
+
+        <label for="chol">Serum Cholesterol (mg/dl):</label>
+        <input type="number" id="chol" name="chol" required><br><br>
+
+        <label for="fbs">Fasting Blood Sugar > 120 mg/dl:</label>
+        <select id="fbs" name="fbs" required>
+            <option value="" disabled selected hidden>Select whether you fast or not</option>
+            <option value="0">No</option>
+            <option value="1">Yes</option>
+        </select><br><br>
+
+        <label for="restecg">Resting Electrocardiographic Results:</label>
+        <select id="restecg" name="restecg" required>
+            <option value="" disabled selected hidden>Select Resting Electrocardiographic Results</option>
+            <option value="0">Normal</option>
+            <option value="1">ST-T Wave Abnormality</option>
+            <option value="2">Probable or Definite Left Ventricular Hypertrophy</option>
+        </select><br><br>
+
+        <label for="thalach">Maximum Heart Rate Achieved:</label>
+        <input type="number" id="thalach" name="thalach" required><br><br>
+
+        <label for="exang">Exercise Induced Angina:</label>
+        <select id="exang" name="exang" required>
+            <option value="" disabled selected hidden>Select if exercise induced Angina is present</option>
+            <option value="0">No</option>
+            <option value="1">Yes</option>
+        </select><br><br>
+
+        <label for="oldpeak">ST Depression Induced by Exercise Relative to Rest:</label>
+        <input type="number" id="oldpeak" name="oldpeak" step="0.01" required><br><br>
+
+        <label for="slope">Slope of the Peak Exercise ST Segment:</label>
+        <select id="slope" name="slope" required>
+            <option value="" disabled selected hidden>Select type of slope</option>
+            <option value="0">Upsloping</option>
+            <option value="1">Flat</option>
+            <option value="2">Downsloping</option>
+        </select><br><br>
+
+        <label for="ca">Number of Major Vessels Colored by Fluoroscopy:</label>
+        <input type="number" id="ca" name="ca" min="0" max="4" required><br><br>
+
+        <label for="thal">Thalassemia:</label>
+        <select id="thal" name="thal" required>
+            <option value="" disabled selected hidden>Select if the defect type</option>
+            <option value="1">Fixed Defect</option>
+            <option value="2">Normal</option>
+            <option value="3">Reversible Defect</option>
+        </select><br><br>
+        
+        <input type="submit" value="Submit">
+    </form>
+    </div>
+</body>
+</html>
+
